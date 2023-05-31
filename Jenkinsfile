@@ -10,12 +10,12 @@ pipeline {
         stage('Build') {
             steps {
                 git branch: 'main', url: 'https://github.com/NarutoU0111/Add-of-two-number.git'
-                sh 'python sum.py'
+                bat 'python sum.py'
             }
         }
         stage('Test') {
             steps {
-                sh 'python -m pytest'
+                bat 'python -m pytest'
             }
         }
     }
